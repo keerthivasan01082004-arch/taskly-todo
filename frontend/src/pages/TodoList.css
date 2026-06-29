@@ -1,0 +1,126 @@
+.list-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 24px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stats-bar {
+  display: flex;
+  gap: 12px;
+}
+
+.stat-item {
+  flex: 1;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-count {
+  font-size: 28px;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: var(--text-dim);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.stat-total .stat-count { color: var(--text); }
+.stat-pending .stat-count { color: var(--text-dim); }
+.stat-in-progress .stat-count { color: var(--accent); }
+.stat-completed .stat-count { color: var(--success); }
+
+.toolbar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-wrap {
+  flex: 1;
+  min-width: 220px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  font-size: 14px;
+  pointer-events: none;
+}
+
+.search-input {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.clear-search {
+  position: absolute;
+  right: 8px;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 18px;
+  line-height: 1;
+  padding: 2px;
+  border-radius: 4px;
+}
+.clear-search:hover { color: var(--text); }
+
+.toolbar-right {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.toolbar-right select {
+  width: auto;
+  padding: 8px 10px;
+}
+
+.todo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 14px;
+}
+
+.loading-center {
+  display: flex;
+  justify-content: center;
+  padding: 60px;
+}
+
+.error-box {
+  background: rgba(240,96,96,0.1);
+  border: 1px solid rgba(240,96,96,0.3);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  color: var(--danger);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 600px) {
+  .stats-bar { flex-wrap: wrap; }
+  .stat-item { min-width: calc(50% - 6px); flex: none; }
+  .toolbar { flex-direction: column; }
+  .search-wrap { width: 100%; }
+  .toolbar-right { width: 100%; justify-content: flex-end; }
+}

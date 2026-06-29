@@ -1,0 +1,145 @@
+.todo-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  cursor: pointer;
+  transition: all var(--transition);
+  border-left: 3px solid transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.todo-card:hover {
+  border-color: var(--accent);
+  background: var(--surface2);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+.todo-card.priority-high { border-left-color: var(--high); }
+.todo-card.priority-medium { border-left-color: var(--medium); }
+.todo-card.priority-low { border-left-color: var(--low); }
+.todo-card.done { opacity: 0.6; }
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.status-toggle {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  background: transparent;
+  color: var(--text-dim);
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition);
+  padding: 0;
+}
+
+.status-toggle.status-completed {
+  background: var(--success);
+  border-color: var(--success);
+  color: var(--bg);
+}
+
+.status-toggle.status-in-progress {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.status-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.card-title {
+  flex: 1;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.card-delete {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 18px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all var(--transition);
+  padding: 0;
+}
+
+.todo-card:hover .card-delete { opacity: 1; }
+.card-delete:hover { background: var(--danger); color: white; }
+
+.card-desc {
+  font-size: 13px;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+
+.card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.overdue-badge {
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: rgba(240,96,96,0.2);
+  color: var(--danger);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.card-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.due-date {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.due-date.overdue { color: var(--danger); }
+
+.subtask-count {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
