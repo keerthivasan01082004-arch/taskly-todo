@@ -1,66 +1,212 @@
-# Taskly — Full-Stack Todo Application
+# 🚀 Taskly –  Todo Application
 
-A complete multi-page todo app built with **React** (frontend) and **Express.js** (backend), with JSON file-based persistence.
+> A modern full-stack Todo application built using **React.js** and **Node.js/Express.js** for efficient task management.
 
-## Project Structure
+![React](https://img.shields.io/badge/React-18-61DAFB?style=flat&logo=react&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-18+-339933?style=flat&logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-4-000000?style=flat&logo=express&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-blue?style=flat)
 
-```
-todo-app/
-├── backend/          # Express.js REST API
-├── frontend/         # React multi-page app
-└── docs/
-    ├── API.md        # Full API reference
-    └── FEATURES.md   # Feature list & documentation
+---
+
+# 📌 Overview
+
+Taskly is a full-stack task management application that enables users to create, organize, update, and manage daily tasks through a clean and responsive user interface backed by a RESTful Express.js API.
+
+The project demonstrates full-stack web development concepts including CRUD operations, REST API integration, JSON-based persistence, React component architecture, and responsive UI design.
+
+---
+
+# ✨ Features
+
+## 📝 Task Management
+
+- Create new todos
+- Edit existing todos
+- Delete todos
+- Update task status
+
+## 🔍 Search & Filtering
+
+- Search tasks instantly
+- Filter by task status
+- Filter by task priority
+- Sort tasks by newest first
+
+## 📊 Dashboard
+
+- Total Tasks
+- Pending Tasks
+- In Progress Tasks
+- Completed Tasks
+
+## 🎨 User Interface
+
+- Responsive design
+- Modern dark theme
+- Clean dashboard
+- Easy navigation
+
+---
+
+# 📸 Pages
+
+| Page | Description |
+|------|-------------|
+| Home | View and manage all tasks |
+| Todo Details | View and edit individual todo |
+
+---
+
+# 🏗 Project Structure
+
+```text
+taskly-todo/
+│
+├── backend/
+│   ├── src/
+│   ├── data/
+│   ├── package.json
+│   └── package-lock.json
+│
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   ├── package.json
+│   └── package-lock.json
+│
+├── docs/
+│   └── API.md
+│
+├── FEATURES.md
+├── README.md
+└── .gitignore
 ```
 
 ---
 
-## Quick Start
+# 🛠 Technology Stack
 
-### Prerequisites
-- Node.js 18+
+## Frontend
+
+- React.js
+- JavaScript
+- HTML5
+- CSS3
+
+## Backend
+
+- Node.js
+- Express.js
+
+## Database
+
+- JSON File Storage
+
+## Tools
+
+- Git
+- GitHub
 - npm
 
-### 1. Start the Backend
+---
+
+# 🔌 REST API
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/todos` | Get all todos |
+| GET | `/api/todos/:id` | Get todo by ID |
+| POST | `/api/todos` | Create new todo |
+| PATCH | `/api/todos/:id` | Update todo |
+| DELETE | `/api/todos/:id` | Delete todo |
+
+---
+
+# 🚀 Installation
+
+## Clone Repository
+
+```bash
+git clone https://github.com/keerthivasan01082004-arch/taskly-todo.git
+```
+
+Move into the project folder.
+
+```bash
+cd taskly-todo
+```
+
+---
+
+## Backend Setup
+
 ```bash
 cd backend
 npm install
-npm start          # runs on http://localhost:5000
-# or
-npm run dev        # with auto-reload via nodemon
+npm start
 ```
 
-### 2. Start the Frontend
+Backend runs at
+
+```text
+http://localhost:5000
+```
+
+---
+
+## Frontend Setup
+
+Open a second terminal.
+
 ```bash
 cd frontend
 npm install
-npm start          # runs on http://localhost:3000
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) — the frontend proxies API calls to port 5000.
+Frontend runs at
+
+```text
+http://localhost:3000
+```
+
+> **Note:** Both backend and frontend must be running simultaneously.
 
 ---
 
-## Pages
+# 📖 Documentation
 
-| Route | Description |
-|-------|-------------|
-| `/` | **Todo List** — view, filter, sort, create, delete todos |
-| `/todo?id=<uuid>` | **Todo Detail** — full view and edit of a single todo |
+Additional project documentation is available in:
 
----
-
-## Tech Stack
-
-| Layer | Technology |
-|-------|-----------|
-| Frontend | React 18, React Router v6, CSS custom properties |
-| Backend | Node.js, Express.js 4 |
-| Persistence | JSON file (`backend/src/data/todos.json`) |
-| ID generation | `uuid` v4 |
+- FEATURES.md
+- docs/API.md
 
 ---
 
-## Documentation
-- [Features & Functionality](./docs/FEATURES.md)
-- [API Reference](./docs/API.md)
+# 🔮 Future Enhancements
+
+- User Authentication
+- Cloud Database
+- Due Date Notifications
+- Task Categories
+- Drag & Drop Tasks
+- Team Collaboration
+
+---
+
+# 👨‍💻 Author
+
+**Keerthi Vasan**
+
+Integrated M.Tech – Computer Science and Engineering
+
+VIT Vellore
+
+GitHub: https://github.com/keerthivasan01082004-arch
+
+---
+
+# 📜 License
+
+This project is developed for academic, learning, and portfolio purposes.
